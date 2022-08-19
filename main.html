@@ -9,39 +9,42 @@
   </head>
   <header><h2>Thiago Palhares</h2></header>
   <body>
-    <div id="border">
+    <div id="calc">
       <h1>Calculadora</h1>
-      <div id="result"></div>
+      <p id="result"></p>
       <table>
         <tr>
-          <td><button>C</button></td>
-          <td><button><</button></td>
-          <td><button>/</button></td>
-          <td><button>X</button></td>
+          <td onclick="clean()"><button>C</button></td>
+          <td onclick="back()"><button><</button></td>
+          <td onclick="insertElement('/')"><button>/</button></td>
+          <td onclick="insertElement('*')"><button>X</button></td>
         </tr>
         <tr>
-          <td><button>7</button></td>
-          <td><button>8</button></td>
-          <td><button>9</button></td>
-          <td><button>-</button></td>
+          <td onclick="insertElement('7')"><button>7</button></td>
+          <td onclick="insertElement('8')"><button>8</button></td>
+          <td onclick="insertElement('9')"><button>9</button></td>
+          <td onclick="insertElement('-')"><button>-</button></td>
         </tr>
         <tr>
-          <td><button>4</button></td>
-          <td><button>5</button></td>
-          <td><button>6</button></td>
-          <td><button>+</button></td>
+          <td onclick="insertElement('4')"><button>4</button></td>
+          <td onclick="insertElement('5')"><button>5</button></td>
+          <td onclick="insertElement('6')"><button>6</button></td>
+          <td onclick="insertElement('+')"><button>+</button></td>
         </tr>
         <tr>
-          <td><button>1</button></td>
-          <td><button>2</button></td>
-          <td><button>3</button></td>
-          <td><button>=</button></td>
+          <td onclick="insertElement('1')"><button>1</button></td>
+          <td onclick="insertElement('2')"><button>2</button></td>
+          <td onclick="insertElement('3')"><button>3</button></td>
+          <td rowspan="2" onclick="calc()"><button id="rowtwo">=</button></td>
         </tr>
         <tr>
-          <td><button>0</button></td>
-          <td><button>,</button></td>
+          <td colspan="2" onclick="insertElement('0')">
+            <button id="coltwo">0</button>
+          </td>
+          <td onclick="insertElement('.')"><button>,</button></td>
         </tr>
       </table>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
